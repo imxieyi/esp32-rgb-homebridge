@@ -1,4 +1,4 @@
-#ESP32 RGB LED for homebridge
+# ESP32 RGB LED for homebridge
 
 This is a project made for [homebridge-better-http-rgb](https://www.npmjs.com/package/homebridge-better-http-rgb) on [HomeBridge](https://github.com/nfarina/homebridge).
 
@@ -43,8 +43,8 @@ Sample HomeBridge config:
 }
 ```
 
-**NOTICE0:**Be sure to include "COMPONENT_LDFLAGS += -lstdc++" in Makefile in order to compile.
+ **NOTICE0:** Be sure to include "COMPONENT_LDFLAGS += -lstdc++" in Makefile in order to compile.
 
-**NOTICE1:**Although I'm using C++ class, it doesn't mean that you can control multiple RGB LED simultaneously by creating multiple objects.
+ **NOTICE1:** Although I'm using C++ class, it doesn't mean that you can control multiple RGB LED simultaneously by creating multiple objects.
 
-**NOTICE2:**I included support for ledc_fade function in [ESP-IDF](https://github.com/espressif/esp-idf), but I strongly recommend not using it because it will jam the server thread.
+ **NOTICE2:** I included support for ledc_fade function in [ESP-IDF](https://github.com/espressif/esp-idf), but I strongly recommend not using it because it will jam the server thread.

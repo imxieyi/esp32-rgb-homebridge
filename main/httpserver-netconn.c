@@ -87,6 +87,7 @@ static void http_server_netconn_serve(struct netconn *conn) {
 			char* ret=cmd_callback(getcmd(buf));
 			ESP_LOGI("httpserver","got ret:%s",ret);
 			ESP_LOGI("httpserver","ret length:%d",strlen(ret));
+			free(ret);
 
 			/* Send the HTML header
 			 * subtract 1 from the size, since we dont send the \0 in the string
